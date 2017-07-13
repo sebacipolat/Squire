@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/cardPlaceItm"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardBackgroundColor="@android:color/transparent"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.5">
+
+            <ImageView
+                android:id="@+id/img_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#9E9E9E"
+                android:scaleType="centerCrop"
+                android:src="@drawable/trump" />
+
+            <TextView
+                android:id="@+id/categoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/violet"
+                android:padding="3dp"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="#F5F5F5"
+            android:orientation="vertical"
+            android:paddingLeft="5dp">
+
+            <com.cipolat.news.Views.CustomView.CustomTextView
+                android:id="@+id/itm_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trump tells Nasa to 'speed up' Mars landing in call to congratulate astronaut"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:maxLines="2"
+                android:textColor="@color/textColorPrimary"
+                app:setAssetFont="Prozak bold.ttf"
+                android:textStyle="bold"/>
+
+            <com.cipolat.news.Views.CustomView.CustomTextView
+                android:id="@+id/itm_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Miercoles, 4 Julio "
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="@color/greyDelta"
+                app:setAssetFont="Prozak light.ttf"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
