@@ -20,6 +20,10 @@ import Model.NewsItem;
  * Created by sebastian on 02/06/16.
  */
 public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener {
+    private class VIEW_TYPES {
+        public static final int TOP = 1;
+        public static final int ITEM = 2;
+    }
 
     public Context mContext;
     private ArrayList<NewsItem> mListNews;
@@ -31,8 +35,15 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.articles_item, parent, false);
-        return new ViewHolderNews(v, mContext);
+        if (viewType == VIEW_TYPES.TOP) {
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.articles_item_top, parent, false);
+            return new ViewHolderTopNews(v, mContext);
+        } else if (viewType == VIEW_TYPES.ITEM) {
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.articles_item, parent, false);
+            v.setOnClickListener(this);
+            return new ViewHolderNews(v, mContext);
+        }
+        throw new RuntimeException("there is no type that matches the type " + viewType + " + make sure your using types correctly");
     }
 
     @Override
@@ -40,6 +51,9 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         if (holder instanceof ViewHolderNews) {
             ViewHolderNews vhNews = (ViewHolderNews) holder;
             vhNews.bindPlaceObj(mListNews.get(position));
+        }else if (holder instanceof ViewHolderTopNews) {
+            ViewHolderTopNews vhTopNews = (ViewHolderTopNews) holder;
+            vhTopNews.bindPlaceObj(mListNews.get(position));
         }
     }
 
@@ -58,15 +72,26 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
     }
 
     @Override
+    public int getItemViewType(int position) {
+        if (isPositionHeader(position))
+            return VIEW_TYPES.TOP;
+        return VIEW_TYPES.ITEM;
+    }
+
+    private boolean isPositionHeader(int position) {
+        return position == 0;
+    }
+
+    @Override
     public void onClick(View view) {
 
     }
 
-    //Para HEADER
+    //Para News
     class ViewHolderNews extends RecyclerView.ViewHolder {
         ImageView imag;
-        TextView   mCategory;
-        CustomTextView mTitle,mDate;
+        TextView mCategory;
+        CustomTextView mTitle, mDate;
         Context innerContext;
 
         public ViewHolderNews(View itemView, Context context) {
@@ -87,6 +112,28 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         }
     }
 
+    //Para News Top
+    class ViewHolderTopNews extends RecyclerView.ViewHolder {
+        ImageView imag;
+        TextView mCategory;
+        CustomTextView mTitle;
+        Context innerContext;
+
+        public ViewHolderTopNews(View itemView, Context context) {
+            super(itemView);
+            this.innerContext = context;
+            this.imag = (ImageView) itemView.findViewById(R.id.img_preview);
+            this.mTitle = (CustomTextView) itemView.findViewById(R.id.itm_title);
+            this.mCategory = (TextView) itemView.findViewById(R.id.categoryLabel);
+        }
+
+        public void bindPlaceObj(NewsItem item) {
+            this.mTitle.setText(item.getTitle());
+            this.mCategory.setText(item.getCategory());
+            Picasso.with(innerContext).setLoggingEnabled(true);
+            Picasso.with(innerContext).load(item.getImageUrl()).into(imag);
+        }
+    }
 }
 
 

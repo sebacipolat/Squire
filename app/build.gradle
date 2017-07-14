@@ -47,5 +47,8 @@ dependencies {
     compile "com.jakewharton:butterknife:${butterKnifeVersion}"
     compile "com.squareup.picasso:picasso:${picassoVersion}"
 
+    //Views
+    compile 'com.github.florent37:diagonallayout:1.0.6'
+
     testCompile 'junit:junit:4.12'
 }
