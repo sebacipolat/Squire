@@ -14,5 +14,10 @@
     <color name="violet">#AB47BC</color>
     <color name="white">#FFFFFF</color>
     <color name="red">#f44336</color>
+    <color name="ligth_blue">#7aa5c9</color>
+    <!--indicator-->
+    <color name="political_red">#d04f4f</color>
+
+
 
 </resources>

@@ -29,9 +29,14 @@ public class CustomTextView extends AppCompatTextView {
             TypedArray array = getContext().obtainStyledAttributes(attrs, R.styleable.CustomTextView);
             String fontName = array.getString(R.styleable.CustomTextView_setAssetFont);
             if (fontName != null) {
-                Typeface typeface = Typeface.createFromAsset(getContext()
-                        .getAssets(), "fonts/" + fontName);
-                setTypeface(typeface);
+                Typeface typeface = null;
+                try {
+                    typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + fontName);
+                    setTypeface(typeface);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
             array.recycle();
         }
