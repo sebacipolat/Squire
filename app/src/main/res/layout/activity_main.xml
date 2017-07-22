@@ -13,7 +13,7 @@
         android:background="@color/colorPrimary"
         android:elevation="8dp">
 
-        <com.cipolat.news.Views.CustomView.CustomTextView
+        <com.cipolat.news.UI.CustomView.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"

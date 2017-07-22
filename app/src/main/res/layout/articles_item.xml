@@ -57,7 +57,7 @@
             android:orientation="vertical"
             android:paddingLeft="5dp">
 
-            <com.cipolat.news.Views.CustomView.CustomTextView
+            <com.cipolat.news.UI.CustomView.CustomTextView
                 android:id="@+id/itm_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
                 app:setAssetFont="Prozak bold.ttf"
                 android:textStyle="bold"/>
 
-            <com.cipolat.news.Views.CustomView.CustomTextView
+            <com.cipolat.news.UI.CustomView.CustomTextView
                 android:id="@+id/itm_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

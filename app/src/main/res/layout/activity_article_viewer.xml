@@ -74,7 +74,7 @@
                         android:src="@drawable/periodista"
                         android:layout_weight="2"/>
 
-                    <com.cipolat.news.Views.CustomView.CustomTextView
+                    <com.cipolat.news.UI.CustomView.CustomTextView
                         android:id="@+id/autorName"
                         android:layout_width="0dp"
                         android:layout_weight="5"
@@ -87,7 +87,7 @@
                         app:setAssetFont="Abel-Regular.ttf" />
                 </LinearLayout>
 
-                <com.cipolat.news.Views.CustomView.CustomTextView
+                <com.cipolat.news.UI.CustomView.CustomTextView
                     android:id="@+id/datePublish"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -125,7 +125,7 @@
             android:paddingRight="15dp"
             android:paddingTop="15dp">
 
-            <com.cipolat.news.Views.CustomView.CustomTextView
+            <com.cipolat.news.UI.CustomView.CustomTextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
                 android:textStyle="bold"
                 app:setAssetFont="Abel-Regular.ttf" />
 
-            <com.cipolat.news.Views.CustomView.CustomTextView
+            <com.cipolat.news.UI.CustomView.CustomTextView
                 android:id="@+id/subTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -151,7 +151,7 @@
                 android:textColor="@color/greyDelta"
                 app:setAssetFont="Abel-Regular.ttf" />
 
-            <com.cipolat.news.Views.CustomView.CustomTextView
+            <com.cipolat.news.UI.CustomView.CustomTextView
                 android:id="@+id/body"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"

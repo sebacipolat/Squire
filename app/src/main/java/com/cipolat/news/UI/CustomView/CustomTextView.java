@@ -1,4 +1,4 @@
-package com.cipolat.news.Views.CustomView;
+package com.cipolat.news.UI.CustomView;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -47,7 +47,7 @@
                 android:textAppearance="@android:style/TextAppearance.Small"
                 android:textColor="@color/white" />
 
-            <com.cipolat.news.Views.CustomView.CustomTextView
+            <com.cipolat.news.UI.CustomView.CustomTextView
                 android:id="@+id/itm_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
