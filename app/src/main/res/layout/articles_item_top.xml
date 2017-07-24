@@ -11,7 +11,6 @@
     android:layout_marginTop="5dp"
     android:clickable="true"
     android:focusable="true"
-    android:foreground="?android:attr/selectableItemBackground"
     card_view:cardBackgroundColor="@android:color/transparent"
     card_view:cardCornerRadius="2dp"
     card_view:cardElevation="4dp">
@@ -25,9 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
-            android:background="#9E9E9E"
             android:scaleType="centerCrop"
-            android:src="@drawable/trump" />
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,7 +57,6 @@
                 android:paddingTop="15dp"
                 android:shadowColor="@color/textColorPrimary"
                 android:shadowRadius="10"
-                android:text="Trump tells Nasa to 'speed up' Mars landing in call to congratulate astronaut"
                 android:textAppearance="@android:style/TextAppearance.Large"
                 android:textColor="@color/white"
                 android:textStyle="bold"

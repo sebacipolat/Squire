@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">News</string>
     <string name="topStory">TOP STORY</string>
-
+    //Article
+    <string name="author_notdefined">Staff</string>
 </resources>

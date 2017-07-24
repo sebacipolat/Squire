@@ -27,6 +27,11 @@ ext {
     butterKnifeVersion = '7.0.1'
     gsonVersion = '2.8.0'
     picassoVersion = '2.5.2'
+    retrofitVersion = '2.3.0'
+    okhttpVersion = '3.8.1'
+    stethoVersion = '1.5.0'
+    rxJavaVersion = '2.1.0'
+    rxDroidVersion = '2.0.1'
 }
 
 dependencies {
@@ -34,6 +39,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //Google
     compile "com.android.support:appcompat-v7:${supportLibVersion}"
     compile "com.android.support:design:${supportLibVersion}"
     compile "com.android.support:percent:${supportLibVersion}"
@@ -43,9 +49,21 @@ dependencies {
     //Square
     compile "com.jakewharton:butterknife:${butterKnifeVersion}"
     compile "com.squareup.picasso:picasso:${picassoVersion}"
+    compile "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+    compile "com.squareup.okhttp3:okhttp:${okhttpVersion}"
+    compile "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+    //FB
+    compile "com.facebook.stetho:stetho:${stethoVersion}"
+    compile "com.facebook.stetho:stetho-okhttp3:${stethoVersion}"
+    //RX
+    compile "io.reactivex.rxjava2:rxjava:${rxJavaVersion}"
+    compile "io.reactivex.rxjava2:rxandroid:${rxDroidVersion}"
     //Views
     compile 'com.github.florent37:diagonallayout:1.0.6'
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.github.florent37:fiftyshadesof:1.0.0'
+    compile 'org.sufficientlysecure:html-textview:3.4'
 
     testCompile 'junit:junit:4.12'
 }
