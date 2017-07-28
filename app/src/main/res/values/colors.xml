@@ -17,7 +17,11 @@
     <color name="ligth_blue">#7aa5c9</color>
     <!--indicator-->
     <color name="political_red">#d04f4f</color>
-
-
+    <color name="green">#009688</color>
+    <color name="blue">#3F51B5</color>
+    <color name="orange">#FF7043</color>
+    <color name="brown2">#795548</color>
+    <color name="grey">#757575</color>
+    <color name="black">#212121</color>
 
 </resources>

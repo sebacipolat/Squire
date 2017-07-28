@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array
+        name="colors_array">
+        <item>@color/political_red</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+        <item>@color/orange</item>
+        <item>@color/brown2</item>
+        <item>@color/grey</item>
+        <item>@color/black</item>
+    </integer-array>
+</resources>

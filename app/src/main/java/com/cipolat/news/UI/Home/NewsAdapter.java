@@ -7,11 +7,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.cipolat.news.Model.TheGuardianApiModel.Article;
 import com.cipolat.news.R;
 import com.cipolat.news.UI.CustomView.CustomTextView;
+import com.cipolat.news.Utils.DateUtils;
+import com.cipolat.news.Utils.Utils;
 import com.github.florent37.fiftyshadesof.FiftyShadesOf;
 import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 /**
@@ -111,8 +115,12 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         public void bindPlaceObj(Article item) {
             if (!item.isDummy()) {
                 this.mTitle.setText(item.getWebTitle());
-                this.mDate.setText(item.getWebPublicationDate());
+                String fecha = DateUtils.convertDateToString(DateUtils.convetDateTimeZone(item.getWebPublicationDate()));
+                this.mDate.setText(fecha);
                 this.mCategory.setText(item.getSectionId());
+                int color = Utils.randomArrayValue(innerContext, R.array.colors_array);
+                this.mCategory.setBackgroundColor(color);
+                item.setTypeColor(color);
                 Picasso.with(innerContext).setLoggingEnabled(true);
                 Picasso.with(innerContext).load(item.getFields().getThumbnail()).into(imag);
             } else {//dummy
@@ -139,11 +147,11 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         public void bindPlaceObj(Article item) {
             if (!item.isDummy()) {
                 this.mTitle.setText(item.getWebTitle());
-                this.mCategory.setText(item.getSectionId());
                 mCategory.setVisibility(View.VISIBLE);
+                this.mCategory.setText(item.getSectionId());
                 Picasso.with(innerContext).setLoggingEnabled(true);
                 Picasso.with(innerContext).load(item.getFields().getThumbnail()).into(imag);
-            }else {//dummy
+            } else {//dummy
                 mCategory.setVisibility(View.GONE);
                 FiftyShadesOf.with(innerContext).on(imag, mTitle).start();
             }

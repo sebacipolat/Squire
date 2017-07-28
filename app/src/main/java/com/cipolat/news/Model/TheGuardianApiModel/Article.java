@@ -11,6 +11,8 @@ public class Article {
     private String id, type, sectionId, webPublicationDate, webTitle, webUrl, apiUrl;
     private Data fields;
     private ArrayList<Author> tags;
+    private int typeColor;
+
     private boolean isDummy = false;
 
     public Article(boolean isDummy) {
@@ -95,6 +97,14 @@ public class Article {
 
     public void setDummy(boolean dummy) {
         isDummy = dummy;
+    }
+
+    public int getTypeColor() {
+        return typeColor;
+    }
+
+    public void setTypeColor(int typeColor) {
+        this.typeColor = typeColor;
     }
 
     public class Data {

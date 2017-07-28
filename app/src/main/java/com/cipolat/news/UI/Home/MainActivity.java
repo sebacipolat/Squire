@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements HomeView {
                     Intent inten = new Intent(getBaseContext(), ArticleViewerActivity.class);
                     inten.putExtra(ArticleViewerActivity.ARTICLE_ITEM_ID, item.getApiUrl());
                     inten.putExtra(ArticleViewerActivity.ARTICLE_ITEM_TITLE, item.getWebTitle());
+                    inten.putExtra(ArticleViewerActivity.ARTICLE_ITEM_COLOR_TYPE, item.getTypeColor());
                     startActivity(inten);
                 }
             }
@@ -97,9 +98,7 @@ public class MainActivity extends AppCompatActivity implements HomeView {
 
     @Override
     public void onNewsSearchResponse(NewsResponse response) {
-
         fillList(response.getResponse().getResults());
-
     }
 
     @Override
