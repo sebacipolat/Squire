@@ -123,8 +123,14 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
                     this.mCategory.setText(item.getSectionId());
                     this.mCategory.setBackgroundColor(ContextCompat.getColor(innerContext, ArticleType.getColorByType(item.getSectionId().toUpperCase())));
                 }
-                Picasso.with(innerContext).setLoggingEnabled(true);
-                Picasso.with(innerContext).load(item.getFields().getThumbnail()).into(imag);
+                //imagen
+                if(item.getFields().getThumbnail()!=null){
+                    Picasso.with(innerContext).setLoggingEnabled(true);
+                    Picasso.with(innerContext).load(item.getFields().getThumbnail()).into(imag);
+                }else{
+                    //TODO
+                }
+
             } else {//dummy
                 FiftyShadesOf.with(innerContext).on(imag, mTitle, mDate, mCategory).start();
             }
