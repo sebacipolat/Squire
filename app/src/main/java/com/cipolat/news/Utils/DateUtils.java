@@ -33,9 +33,9 @@ public class DateUtils {
 
             if (!isToday(date)) {
                 if (isThisYear(date))
-                    fecha = dayOfTheWeek + ", " + numberday + " de " + month;
+                    fecha = Utils.firstCapital(dayOfTheWeek) + ", " + numberday + " de " + Utils.firstCapital(month);
                 else
-                    fecha = dayOfTheWeek + ", " + numberday + " de " + month + " " + year;
+                    fecha = Utils.firstCapital(dayOfTheWeek) + ", " + numberday + " de " + Utils.firstCapital(month) + " " + year;
             } else
                 fecha = "Hoy";
 

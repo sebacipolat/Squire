@@ -1,6 +1,6 @@
 package com.cipolat.news.UI.Home;
 
-import com.cipolat.news.Model.TheGuardianApiModel.NewsResponse;
+import com.cipolat.news.Data.Network.Model.NewsResponse;
 
 /**
  * Created by sebastian on 23/07/17.

@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">News</string>
+    <string name="app_name">Squire</string>
     <string name="topStory">TOP STORY</string>
     //Article
     <string name="author_notdefined">Staff</string>
+    //Sections
+    <string name="section_1">Home</string>
+    <string name="section_2">Politics</string>
+    <string name="section_3">Sports</string>
+    <string name="section_4">Fashion</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.cipolat.news.UI.Home;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cipolat.news.Model.TheGuardianApiModel.Article;
+import com.cipolat.news.Data.Network.Model.Article;
+import com.cipolat.news.Data.Network.Model.ArticleType;
 import com.cipolat.news.R;
 import com.cipolat.news.UI.CustomView.CustomTextView;
 import com.cipolat.news.Utils.DateUtils;
@@ -117,10 +119,10 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
                 this.mTitle.setText(item.getWebTitle());
                 String fecha = DateUtils.convertDateToString(DateUtils.convetDateTimeZone(item.getWebPublicationDate()));
                 this.mDate.setText(fecha);
-                this.mCategory.setText(item.getSectionId());
-                int color = Utils.randomArrayValue(innerContext, R.array.colors_array);
-                this.mCategory.setBackgroundColor(color);
-                item.setTypeColor(color);
+                if (item.getSectionId() != null && !item.getSectionId().isEmpty()) {
+                    this.mCategory.setText(item.getSectionId());
+                    this.mCategory.setBackgroundColor(ContextCompat.getColor(innerContext, ArticleType.getColorByType(item.getSectionId().toUpperCase())));
+                }
                 Picasso.with(innerContext).setLoggingEnabled(true);
                 Picasso.with(innerContext).load(item.getFields().getThumbnail()).into(imag);
             } else {//dummy
@@ -148,7 +150,7 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
             if (!item.isDummy()) {
                 this.mTitle.setText(item.getWebTitle());
                 mCategory.setVisibility(View.VISIBLE);
-                this.mCategory.setText(item.getSectionId());
+                this.mCategory.setText(innerContext.getString(R.string.topStory));
                 Picasso.with(innerContext).setLoggingEnabled(true);
                 Picasso.with(innerContext).load(item.getFields().getThumbnail()).into(imag);
             } else {//dummy

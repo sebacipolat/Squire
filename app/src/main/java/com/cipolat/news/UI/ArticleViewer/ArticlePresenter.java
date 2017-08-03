@@ -2,11 +2,9 @@ package com.cipolat.news.UI.ArticleViewer;
 
 import android.content.Context;
 
-import com.cipolat.news.Model.Presenter;
-import com.cipolat.news.Model.TheGuardianApiModel.ArticleResponse;
-import com.cipolat.news.Model.TheGuardianApiModel.NewsResponse;
-import com.cipolat.news.Network.GuardianApiInteractor;
-import com.cipolat.news.UI.Home.HomeView;
+import com.cipolat.news.UI.base.Presenter;
+import com.cipolat.news.Data.Network.Model.ArticleResponse;
+import com.cipolat.news.Data.Network.GuardianApiInteractor;
 
 /**
  * Created by sebastian on 23/07/17.

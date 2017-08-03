@@ -23,5 +23,16 @@
     <color name="brown2">#795548</color>
     <color name="grey">#757575</color>
     <color name="black">#212121</color>
+    <color name="green2">#66BB6A</color>
+    #
+    <color name="fashion_pink">#E91E63</color>
+    <color name="sports_orange">#FF5722</color>
+    <color name="book_yellow">#FFC107</color>
+    <color name="society_red">#d50000</color>
+    <color name="film_green">#009688</color>
+    <color name="comfree_brown">#795548</color>
+    <color name="environmtn_green">#00695C</color>
+
+
 
 </resources>

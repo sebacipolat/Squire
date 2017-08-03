@@ -1,4 +1,4 @@
-package com.cipolat.news.Application;
+package com.cipolat.news;
 
 import android.app.Application;
 import android.support.compat.BuildConfig;

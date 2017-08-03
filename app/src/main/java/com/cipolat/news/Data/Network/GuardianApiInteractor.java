@@ -1,9 +1,9 @@
-package com.cipolat.news.Network;
+package com.cipolat.news.Data.Network;
 
 import com.cipolat.news.Data.Constants;
 import com.cipolat.news.Logger.L;
-import com.cipolat.news.Model.TheGuardianApiModel.ArticleResponse;
-import com.cipolat.news.Model.TheGuardianApiModel.NewsResponse;
+import com.cipolat.news.Data.Network.Model.ArticleResponse;
+import com.cipolat.news.Data.Network.Model.NewsResponse;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
@@ -21,14 +21,12 @@ public class GuardianApiInteractor {
         apiService = ApiClient.getClient().create(GuardianApi.class);
     }
 
-    public void searchNews(final NewsSearchCallback callback) {
-        String search = "movies,lifestyle,polictics,world";
-        apiService.searchNews(search, "json", "2017", "thumbnail", "relevance", Constants.API_KEY)
+    public void searchNewsByKeys(String keys,final NewsSearchCallback callback) {
+        apiService.searchNews(keys, "json", "2017", "thumbnail", "relevance", Constants.API_KEY)
                 .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new DisposableObserver<NewsResponse>() {
                     @Override
                     public void onNext(@NonNull NewsResponse newsResponse) {
-                        L.e("OKOKKK", ":)");
                         if (newsResponse != null)
                             callback.onSuccess(newsResponse);
                     }

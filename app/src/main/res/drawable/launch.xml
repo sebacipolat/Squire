@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="#fdfdfd"/>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/news_medium"
+            android:tileMode="disabled"
+            android:gravity="center"/>
+    </item>
+</layer-list>

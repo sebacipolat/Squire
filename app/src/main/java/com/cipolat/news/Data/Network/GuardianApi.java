@@ -1,12 +1,11 @@
-package com.cipolat.news.Network;
+package com.cipolat.news.Data.Network;
 
 
-import com.cipolat.news.Model.TheGuardianApiModel.ArticleResponse;
-import com.cipolat.news.Model.TheGuardianApiModel.NewsResponse;
+import com.cipolat.news.Data.Network.Model.ArticleResponse;
+import com.cipolat.news.Data.Network.Model.NewsResponse;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 import retrofit2.http.Url;
 

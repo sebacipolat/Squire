@@ -1,4 +1,4 @@
-package com.cipolat.news.Network;
+package com.cipolat.news.Data.Network;
 
 /**
  * Created by sebastian on 22/07/17.

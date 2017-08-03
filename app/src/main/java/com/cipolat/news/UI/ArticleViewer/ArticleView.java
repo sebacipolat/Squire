@@ -1,6 +1,6 @@
 package com.cipolat.news.UI.ArticleViewer;
 
-import com.cipolat.news.Model.TheGuardianApiModel.ArticleResponse;
+import com.cipolat.news.Data.Network.Model.ArticleResponse;
 
 /**
  * Created by sebastian on 23/07/17.

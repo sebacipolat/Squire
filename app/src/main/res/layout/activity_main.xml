@@ -5,28 +5,56 @@
     android:layout_height="match_parent"
     android:background="@color/greyZircon"
     android:fitsSystemWindows="true">
-    <!-- Toolbar-->
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:elevation="8dp">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Toolbar-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="8dp">
 
-        <com.cipolat.news.UI.CustomView.CustomTextView
-            android:layout_width="wrap_content"
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_news" />
+
+            <com.cipolat.news.UI.CustomView.CustomTextView
+                android:id="@+id/mainTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/brown"
+                android:textStyle="bold"
+                app:setAssetFont="Sheeping Dogs.ttf" />
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:text="@string/app_name"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:textColor="@color/brown"
-            android:textStyle="bold"
-            app:setAssetFont="Abel-Regular.ttf" />
-    </android.support.v7.widget.Toolbar>
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/brown"
+            app:tabTextColor="@color/greyDelta"
+            app:tabSelectedTextColor="@color/political_red"
+            app:tabIndicatorHeight="4dp"
+            app:tabMode="fixed" />
+    </android.support.design.widget.AppBarLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_below="@+id/toolbar"
-        android:id="@+id/listNews"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout" />
 </RelativeLayout>

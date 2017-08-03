@@ -1,4 +1,4 @@
-package com.cipolat.news.Model;
+package com.cipolat.news.UI.base;
 
 /**
  * Created by sebastian on 27/08/16.

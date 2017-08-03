@@ -1,4 +1,4 @@
-package com.cipolat.news.Model.TheGuardianApiModel;
+package com.cipolat.news.Data.Network.Model;
 
 import java.util.ArrayList;
 

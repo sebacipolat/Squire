@@ -1,8 +1,8 @@
-package com.cipolat.news.Model;
+package com.cipolat.news.UI.base;
 
 import android.view.View;
 
-import com.cipolat.news.Model.TheGuardianApiModel.Article;
+import com.cipolat.news.Data.Network.Model.Article;
 
 /**
  * Created by sebastian on 22/07/17.
