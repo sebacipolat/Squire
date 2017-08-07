@@ -2,11 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
     android:orientation="vertical">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/listNews"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar" />
+        android:layout_below="@+id/toolbar"
+         />
+
+    <!--<com.cipolat.superstateview.SuperStateView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:setTitleText="Hola soy el titulo"
+        app:setSubTitleText="subtitulo"
+        app:imageResource="@drawable/cloud_sad"
+        app:titleStyle="@style/placeholder_title"
+        app:subTitleStyle="@style/placeholder_title"
+
+
+        />-->
 </LinearLayout>

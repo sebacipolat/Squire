@@ -1,11 +1,17 @@
 <resources>
     <string name="app_name">Squire</string>
     <string name="topStory">TOP STORY</string>
-    //Article
-    <string name="author_notdefined">Staff</string>
-    //Sections
+    <!--Article-->
+    <string name="author_notdefined">Squire</string>
+    <string name="see_more_lbl">MORE STORIES:</string>
+    <!--Sections-->
     <string name="section_1">Home</string>
     <string name="section_2">Politics</string>
     <string name="section_3">Sports</string>
-    <string name="section_4">Technology</string>
+    <string name="section_4">Techno</string>
+    <!-- Labels-->
+    <string name="empty_state_lbl">No hay contenido para mostrar aun.</string>
+    <string name="internet_connection_error_lbl">No hay conexion a internet!</string>
+    <string name="internet_connection_error_sub_lbl">Verifica tu conexion y vuelve a intentarlo!</string>
+
 </resources>

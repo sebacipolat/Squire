@@ -29,6 +29,7 @@ public class ArticleType {
     public static final String WEATHER = "weather";
     public static final String LIFESTYLE = "LIFESTYLE";
     public static final String COMMENTISFREE = "COMMENTISFREE";
+    public static final String COMMENTISFREE_REEPLACE = "Opinion";
     public static final String SPORTS = "SPORTS";
 
     private String type;
@@ -38,7 +39,6 @@ public class ArticleType {
     }
 
     public static int getColorByType(String type) {
-        L.e("TAG===>"," "+type);
         int color = 0;
         switch (type) {
             case MOVIES:

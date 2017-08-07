@@ -12,4 +12,15 @@
     <style name="LaunchTheme" parent="AppTheme">
         <item name="android:windowBackground">@drawable/launch</item>
     </style>
+
+
+    <style name="placeholder_title">
+        <item name="android:textColor">@color/violet</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">@color/greyDelta</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:textSize">30sp</item>
+    </style>
 </resources>

@@ -10,4 +10,5 @@ public interface HomeView {
 
     void onNewsSearchResponse(NewsResponse response);
     void onNewsSearchFail();
+    void onNetworkError();
 }

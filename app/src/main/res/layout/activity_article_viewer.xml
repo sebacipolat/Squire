@@ -34,9 +34,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/dark_shadow_top"
                     android:elevation="14dp"
-                    />
+                    android:src="@drawable/dark_shadow_top" />
 
                 <com.github.florent37.diagonallayout.DiagonalLayout
                     android:layout_width="match_parent"
@@ -60,12 +59,12 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_indicator_background"
                     android:elevation="18dp"
+                    android:maxLines="1"
                     android:padding="8dp"
                     android:textAllCaps="true"
                     android:textAppearance="@android:style/TextAppearance.Small"
                     android:textColor="@color/white"
                     android:visibility="gone"
-                    android:maxLines="1"
                     app:layout_marginLeftPercent="72%"
                     app:layout_marginTopPercent="50%" />
                 <!--Autor-->
@@ -142,11 +141,11 @@
                 android:shadowDx="0"
                 android:shadowDy="1"
                 android:shadowRadius="3"
-                android:textColor="@color/textColorPrimary"
-                android:textSize="25sp"
+                android:textColor="@color/brown"
+                android:textSize="30sp"
                 android:textStyle="bold"
-                app:setAssetFont="Abel-Regular.ttf"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                app:setAssetFont="Abel-Regular.ttf" />
 
             <com.cipolat.news.UI.CustomView.CustomTextView
                 android:id="@+id/subTitle"
@@ -156,9 +155,8 @@
                 android:maxLines="3"
                 android:textAppearance="@android:style/TextAppearance.Medium"
                 android:textColor="@color/greyDelta"
-                app:setAssetFont="Abel-Regular.ttf"
                 android:visibility="gone"
-                />
+                app:setAssetFont="Abel-Regular.ttf" />
 
             <org.sufficientlysecure.htmltextview.HtmlTextView
                 android:id="@+id/body"
@@ -167,18 +165,36 @@
                 android:layout_marginTop="10dp"
                 android:textAppearance="@android:style/TextAppearance.Medium"
                 android:textColor="@color/textColorPrimary"
-                app:setAssetFont="Abel-Regular.ttf"
-                android:visibility="gone"/>
+                android:textColorLink="@color/ligth_blue"
+                android:visibility="gone" />
 
-            <com.github.ybq.android.spinkit.SpinKitView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/loader"
                 style="@style/SpinKitView.Large.ThreeBounce"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:SpinKit_Color="@color/grey" />
-
+                app:SpinKit_Color="@color/greyChateau" />
+            <!--Divider-->
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/grey"
+                android:visibility="gone"/>
+            <com.cipolat.news.UI.CustomView.CustomTextView
+                android:id="@+id/moreStoriesLbl"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/see_more_lbl"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/brown"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

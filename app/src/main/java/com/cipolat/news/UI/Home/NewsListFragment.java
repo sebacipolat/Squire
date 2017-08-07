@@ -27,17 +27,14 @@ public class NewsListFragment extends Fragment implements HomeView {
     @Bind(R.id.listNews)
     RecyclerView listNews;
     private HomePresenter mHomePresenter;
-    private SearchBody mSearchBody;
 
     public NewsListFragment() {
 
     }
 
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -110,7 +107,12 @@ public class NewsListFragment extends Fragment implements HomeView {
     }
 
     @Override
-    public void onNewsSearchFail() {
+    public void onNewsSearchFail(){
+
+    }
+
+    @Override
+    public void onNetworkError() {
 
     }
 }

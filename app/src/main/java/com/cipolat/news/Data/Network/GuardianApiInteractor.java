@@ -32,8 +32,8 @@ public class GuardianApiInteractor {
                     }
 
                     @Override
-                    public void onError(@NonNull Throwable throwable) {
-                        L.e("errr", "err");
+                    public void onError(@NonNull Throwable e) {
+                        L.e("Error"," ");
                     }
 
                     @Override

@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/News.iml" filepath="$PROJECT_DIR$/News.iml" />
       <module fileurl="file://$USER_HOME$/ANDROID/AndroidStudio Workspace/NewsApp/NewsApp.iml" filepath="$USER_HOME$/ANDROID/AndroidStudio Workspace/NewsApp/NewsApp.iml" />
       <module fileurl="file://$USER_HOME$/ANDROID/AndroidStudio Workspace/NewsApp/app/app.iml" filepath="$USER_HOME$/ANDROID/AndroidStudio Workspace/NewsApp/app/app.iml" />
+      <module fileurl="file://$USER_HOME$/ANDROID/AndroidStudio Workspace/NewsApp/superstateview/superstateview.iml" filepath="$USER_HOME$/ANDROID/AndroidStudio Workspace/NewsApp/superstateview/superstateview.iml" />
+      <module fileurl="file://$USER_HOME$/ANDROID/AndroidStudio Workspace/NewsApp/superstateview/superstateview.iml" filepath="$USER_HOME$/ANDROID/AndroidStudio Workspace/NewsApp/superstateview/superstateview.iml" />
     </modules>
   </component>
 </project>
