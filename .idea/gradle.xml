@@ -9,7 +9,6 @@
           <set>
             <option value="$USER_HOME$/ANDROID/AndroidStudio Workspace/NewsApp" />
             <option value="$USER_HOME$/ANDROID/AndroidStudio Workspace/NewsApp/app" />
-            <option value="$USER_HOME$/ANDROID/AndroidStudio Workspace/NewsApp/superstateview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

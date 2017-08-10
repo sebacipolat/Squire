@@ -34,9 +34,11 @@ public class ArticlePresenter implements Presenter<ArticleView> {
             }
 
             @Override
-            public void onError() {
+            public void onError(Throwable e) {
 
             }
+
+
         });
     }
 

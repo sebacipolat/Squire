@@ -65,20 +65,30 @@ public class MainActivity extends AppCompatActivity {
         homeKeys.add(new ArticleType(ArticleType.MOVIES));
         homeKeys.add(new ArticleType(ArticleType.FILM));
         homeKeys.add(new ArticleType(ArticleType.FASHION));
+        homeKeys.add(new ArticleType(ArticleType.NETFLIX));
+        homeKeys.add(new ArticleType(ArticleType.DISNEY));
         homeKeys.add(new ArticleType(ArticleType.WORLD));
         bundHome.putParcelable(NewsListFragment.NEWS_TOPIC, new SearchBody(homeKeys));
         newsList1.setArguments(bundHome);
 
+
         NewsListFragment newsList2 = new NewsListFragment();
         Bundle bundPolyt = new Bundle();
-        bundPolyt.putParcelable(NewsListFragment.NEWS_TOPIC, new SearchBody(new ArticleType(ArticleType.POLITICS)));
+        ArrayList<ArticleType> politicsKeys = new ArrayList<>();
+        politicsKeys.add(new ArticleType(ArticleType.POLITICS));
+        politicsKeys.add(new ArticleType(ArticleType.TRUMP));
+        politicsKeys.add(new ArticleType(ArticleType.PUTTIN));
+        bundPolyt.putParcelable(NewsListFragment.NEWS_TOPIC, new SearchBody(politicsKeys));
         newsList2.setArguments(bundPolyt);
 
         NewsListFragment newsList3 = new NewsListFragment();
         Bundle bundSport = new Bundle();
         ArrayList<ArticleType> sportsKeys = new ArrayList<>();
-        homeKeys.add(new ArticleType(ArticleType.SPORTS));
-        homeKeys.add(new ArticleType(ArticleType.FOOTBALL));
+        sportsKeys.add(new ArticleType(ArticleType.SPORTS));
+        sportsKeys.add(new ArticleType(ArticleType.FOOTBALL));
+        sportsKeys.add(new ArticleType(ArticleType.BASEBALL));
+        sportsKeys.add(new ArticleType(ArticleType.NFL));
+        sportsKeys.add(new ArticleType(ArticleType.F1));
 
         bundSport.putParcelable(NewsListFragment.NEWS_TOPIC, new SearchBody(sportsKeys));
         newsList3.setArguments(bundSport);

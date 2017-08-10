@@ -23,4 +23,10 @@
         <item name="android:shadowRadius">3</item>
         <item name="android:textSize">30sp</item>
     </style>
+
+    <style name="placeholder_error_sub_title">
+        <item name="android:textColor">@color/greyDelta</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
 </resources>

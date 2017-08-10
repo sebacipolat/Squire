@@ -35,8 +35,8 @@ public class HomePresenter implements Presenter<HomeView> {
             }
 
             @Override
-            public void onError() {
-
+            public void onError(Throwable e) {
+                mPView.onNetworkError();
             }
         });
     }

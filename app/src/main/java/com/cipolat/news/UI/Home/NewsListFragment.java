@@ -9,14 +9,20 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.cipolat.news.Data.Network.Model.Article;
 import com.cipolat.news.Data.Network.Model.NewsResponse;
 import com.cipolat.news.Data.Network.Model.SearchBody;
 import com.cipolat.news.R;
 import com.cipolat.news.UI.ArticleViewer.ArticleViewerActivity;
+import com.cipolat.superstateview.SuperStateView;
+
 import java.util.ArrayList;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
+
+import android.support.v4.content.ContextCompat;
 
 /**
  * Created by sebastian on 02/08/17.
@@ -26,6 +32,8 @@ public class NewsListFragment extends Fragment implements HomeView {
     public static final String NEWS_TOPIC = "NEWS_TOPIC";
     @Bind(R.id.listNews)
     RecyclerView listNews;
+    @Bind(R.id.stateView)
+    SuperStateView stateView;
     private HomePresenter mHomePresenter;
 
     public NewsListFragment() {
@@ -107,12 +115,22 @@ public class NewsListFragment extends Fragment implements HomeView {
     }
 
     @Override
-    public void onNewsSearchFail(){
+    public void onNewsSearchFail() {
 
     }
 
     @Override
     public void onNetworkError() {
+        listNews.setVisibility(View.GONE);
+        setNetworkErrorImageState();
+    }
 
+    private void setNetworkErrorImageState() {
+        stateView.setVisibility(View.VISIBLE);
+        stateView.setImageState( R.drawable.cloud_sad);
+        stateView.setTitleText(getString(R.string.internet_connection_error_lbl));
+        stateView.setSubTitleText(getString(R.string.internet_connection_error_sub_lbl));
+        stateView.setTitleStyle(R.style.placeholder_title);
+        stateView.setSubTitleStyle(R.style.placeholder_error_sub_title);
     }
 }

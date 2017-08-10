@@ -1,7 +1,7 @@
 package com.cipolat.news.Data.Network.Model;
 
-import com.cipolat.news.Logger.L;
 import com.cipolat.news.R;
+
 /**
  * Created by sebastian on 02/08/17.
  */
@@ -19,7 +19,17 @@ public class ArticleType {
     public static final String EDUCATION = "EDUCATION";
     public static final String ENVIRONMENT = "ENVIRONMENT";
     public static final String FASHION = "FASHION";
+    public static final String NETFLIX = "NETFLIX";
+    public static final String DISNEY = "DISNEY";
+    public static final String TRUMP = "TRUMP";
+    public static final String PUTTIN = "PUTTIN";
+
     public static final String FOOTBALL = "FOOTBALL";
+    public static final String SOCCER = "SOCCER";
+    public static final String NFL = "NFL";
+    public static final String BASEBALL = "BASEBALL";
+    public static final String F1 = "F1";
+
     public static final String MEDIA = "MEDIA";
     public static final String MUSIC = "MUSIC";
     public static final String POLITICS = "POLITICS";

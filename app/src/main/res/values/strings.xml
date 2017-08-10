@@ -11,7 +11,7 @@
     <string name="section_4">Techno</string>
     <!-- Labels-->
     <string name="empty_state_lbl">No hay contenido para mostrar aun.</string>
-    <string name="internet_connection_error_lbl">No hay conexion a internet!</string>
-    <string name="internet_connection_error_sub_lbl">Verifica tu conexion y vuelve a intentarlo!</string>
+    <string name="internet_connection_error_lbl">Woops!</string>
+    <string name="internet_connection_error_sub_lbl">Verify your internet connection!</string>
 
 </resources>

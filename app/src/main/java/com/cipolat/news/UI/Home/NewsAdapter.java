@@ -124,10 +124,11 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
                     this.mCategory.setBackgroundColor(ContextCompat.getColor(innerContext, ArticleType.getColorByType(item.getSectionId().toUpperCase())));
                 }
                 //imagen
-                if(item.getFields().getThumbnail()!=null){
+                if (item.getFields() != null && item.getFields().getThumbnail() != null) {
+
                     Picasso.with(innerContext).setLoggingEnabled(true);
                     Picasso.with(innerContext).load(item.getFields().getThumbnail()).into(imag);
-                }else{
+                } else {
                     //TODO
                 }
 
