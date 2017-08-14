@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Header-->
+<android.support.percent.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="14dp"
+        android:src="@drawable/dark_shadow_top" />
+
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        app:diagonal_angle="20"
+        app:diagonal_direction="right"
+        app:diagonal_position="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="210dp">
+
+        <ImageView
+            android:id="@+id/headerPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </com.github.florent37.diagonallayout.DiagonalLayout>
+    <!--Type-->
+    <TextView
+        android:id="@+id/categoryLabel"
+        app:layout_marginLeftPercent="72%"
+        app:layout_marginTopPercent="50%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_indicator_background"
+        android:elevation="18dp"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:textAllCaps="true"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+    <!--Autor-->
+    <LinearLayout
+        app:layout_heightPercent="20%"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginTopPercent="55%"
+        app:layout_widthPercent="50%"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/autorPic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <com.cipolat.news.UI.CustomView.CustomTextView
+            android:id="@+id/autorName"
+            app:setAssetFont="Abel-Regular.ttf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="5"
+            android:maxLines="3"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/ligth_blue" />
+    </LinearLayout>
+
+    <com.cipolat.news.UI.CustomView.CustomTextView
+        android:id="@+id/datePublish"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginTopPercent="80%"
+        app:setAssetFont="Abel-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/greyDelta" />
+</android.support.percent.PercentFrameLayout>

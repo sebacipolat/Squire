@@ -1,6 +1,8 @@
 package com.cipolat.news.UI.Home;
 
 import android.content.Context;
+
+import com.cipolat.news.Data.DataManager;
 import com.cipolat.news.Data.Network.Model.ArticleType;
 import com.cipolat.news.Data.Network.Model.SearchBody;
 import com.cipolat.news.UI.base.Presenter;
@@ -28,15 +30,17 @@ public class HomePresenter implements Presenter<HomeView> {
     }
 
     public void getNewsByCriteria(SearchBody search) {
-        mInteractor.searchNewsByKeys(search.getSearchString(),new GuardianApiInteractor.NewsSearchCallback() {
+        mInteractor.searchNewsByKeys(search.getSearchString(), new GuardianApiInteractor.NewsSearchCallback() {
             @Override
             public void onSuccess(NewsResponse cityListResponse) {
+                DataManager.getInstance().appendArticles(cityListResponse.getResponse().getResults());
                 mPView.onNewsSearchResponse(cityListResponse);
             }
 
             @Override
             public void onError(Throwable e) {
-                mPView.onNetworkError();
+                //mPView.onNetworkError();
+                mPView.onNewsSearchFail();
             }
         });
     }

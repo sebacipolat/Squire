@@ -80,6 +80,7 @@ public class NewsListFragment extends Fragment implements HomeView {
                     inten.putExtra(ArticleViewerActivity.ARTICLE_ITEM_ID, item.getApiUrl());
                     inten.putExtra(ArticleViewerActivity.ARTICLE_ITEM_TITLE, item.getWebTitle());
                     inten.putExtra(ArticleViewerActivity.ARTICLE_ITEM_COLOR_TYPE, item.getTypeColor());
+                    inten.putExtra(ArticleViewerActivity.ARTICLE_SHARE_URL, item.getWebUrl());
                     startActivity(inten);
                 }
             }
@@ -116,7 +117,8 @@ public class NewsListFragment extends Fragment implements HomeView {
 
     @Override
     public void onNewsSearchFail() {
-
+        listNews.setVisibility(View.GONE);
+        setErrorImageState();
     }
 
     @Override
@@ -130,7 +132,15 @@ public class NewsListFragment extends Fragment implements HomeView {
         stateView.setImageState( R.drawable.cloud_sad);
         stateView.setTitleText(getString(R.string.internet_connection_error_lbl));
         stateView.setSubTitleText(getString(R.string.internet_connection_error_sub_lbl));
-        stateView.setTitleStyle(R.style.placeholder_title);
+        stateView.setTitleStyle(R.style.network_error_placeholder_title);
+        stateView.setSubTitleStyle(R.style.placeholder_error_sub_title);
+    }
+    private void setErrorImageState() {
+        stateView.setVisibility(View.VISIBLE);
+        stateView.setImageState( R.drawable.error_guy);
+        stateView.setTitleText(getString(R.string.response_error_lbl));
+        stateView.setSubTitleText(getString(R.string.response_error_sub_lbl));
+        stateView.setTitleStyle(R.style.response_error_placeholder_title);
         stateView.setSubTitleStyle(R.style.placeholder_error_sub_title);
     }
 }

@@ -14,7 +14,7 @@
     </style>
 
 
-    <style name="placeholder_title">
+    <style name="network_error_placeholder_title">
         <item name="android:textColor">@color/violet</item>
         <item name="android:textStyle">bold</item>
         <item name="android:shadowColor">@color/greyDelta</item>
@@ -23,7 +23,15 @@
         <item name="android:shadowRadius">3</item>
         <item name="android:textSize">30sp</item>
     </style>
-
+    <style name="response_error_placeholder_title">
+        <item name="android:textColor">@color/political_red</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">@color/greyDelta</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:textSize">30sp</item>
+    </style>
     <style name="placeholder_error_sub_title">
         <item name="android:textColor">@color/greyDelta</item>
         <item name="android:textStyle">bold</item>

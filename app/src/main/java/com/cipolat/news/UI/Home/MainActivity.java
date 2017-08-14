@@ -1,6 +1,5 @@
 package com.cipolat.news.UI.Home;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
@@ -13,13 +12,12 @@ import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 
+import com.cipolat.news.Data.DataManager;
 import com.cipolat.news.Data.Network.Model.ArticleType;
 import com.cipolat.news.Data.Network.Model.SearchBody;
 import com.cipolat.news.R;
 import com.cipolat.news.UI.CustomView.CustomTextView;
-
 import java.util.ArrayList;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -52,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Cargo ViewPager
         setupViewPager(mViewPager);
+        DataManager.getInstance().init(this);
     }
 
     private void setupViewPager(ViewPager viewPager) {

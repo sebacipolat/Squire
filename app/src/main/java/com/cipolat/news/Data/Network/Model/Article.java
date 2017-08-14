@@ -19,6 +19,9 @@ public class Article {
         this.isDummy = isDummy;
     }
 
+    public Article(String webTitle) {
+        this.webTitle = webTitle;
+    }
     public ArrayList<Author> getTags() {
         return tags;
     }

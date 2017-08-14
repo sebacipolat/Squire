@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:background="@color/black"
+    android:orientation="horizontal"
+    android:visibility="gone">
+
+    <android.support.v7.widget.AppCompatImageView
+        app:srcCompat="@drawable/ic_news"
+        app:tint="@color/colorPrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:scaleType="centerInside" />
+
+    <com.cipolat.news.UI.CustomView.CustomTextView
+        app:setAssetFont="Sheeping Dogs.ttf"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_weight="4"
+        android:gravity="center|left"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="SQUIRE"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <com.cipolat.news.UI.CustomView.CustomTextView
+        app:setAssetFont="Sheeping Dogs.ttf"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="2017&#169;"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+</LinearLayout>
