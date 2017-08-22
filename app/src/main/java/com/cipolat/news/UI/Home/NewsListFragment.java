@@ -9,20 +9,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.cipolat.news.Data.Network.Model.Article;
 import com.cipolat.news.Data.Network.Model.NewsResponse;
 import com.cipolat.news.Data.Network.Model.SearchBody;
 import com.cipolat.news.R;
 import com.cipolat.news.UI.ArticleViewer.ArticleViewerActivity;
 import com.cipolat.superstateview.SuperStateView;
-
 import java.util.ArrayList;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-import android.support.v4.content.ContextCompat;
 
 /**
  * Created by sebastian on 02/08/17.
@@ -103,6 +99,7 @@ public class NewsListFragment extends Fragment implements HomeView {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+        mHomePresenter.detachView();
     }
 
     @Override
@@ -125,6 +122,18 @@ public class NewsListFragment extends Fragment implements HomeView {
     public void onNetworkError() {
         listNews.setVisibility(View.GONE);
         setNetworkErrorImageState();
+    }
+
+    @Override
+    public void onNetworkTimeOut() {
+        listNews.setVisibility(View.GONE);
+        setNetworkErrorImageState();
+    }
+
+    @Override
+    public void onUnkownError(String error) {
+        listNews.setVisibility(View.GONE);
+        setErrorImageState();
     }
 
     private void setNetworkErrorImageState() {

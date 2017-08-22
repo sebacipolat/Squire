@@ -156,12 +156,12 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         public void bindPlaceObj(Article item) {
             if (!item.isDummy()) {
                 this.mTitle.setText(item.getWebTitle());
-                mCategory.setVisibility(View.VISIBLE);
+                this.mCategory.setVisibility(View.VISIBLE);
                 this.mCategory.setText(innerContext.getString(R.string.topStory));
                 Picasso.with(innerContext).setLoggingEnabled(true);
                 Picasso.with(innerContext).load(item.getFields().getThumbnail()).into(imag);
             } else {//dummy
-                mCategory.setVisibility(View.GONE);
+                this.mCategory.setVisibility(View.GONE);
                 FiftyShadesOf.with(innerContext).on(imag, mTitle).start();
             }
         }

@@ -13,6 +13,6 @@
     <string name="empty_state_lbl">No hay contenido para mostrar aun.</string>
     <string name="internet_connection_error_lbl">Woops!</string>
     <string name="internet_connection_error_sub_lbl">Verify your internet connection!</string>
-    <string name="response_error_lbl">Something Fail!</string>
+    <string name="response_error_lbl">Something Wrong!</string>
     <string name="response_error_sub_lbl">Please try again!</string>
 </resources>

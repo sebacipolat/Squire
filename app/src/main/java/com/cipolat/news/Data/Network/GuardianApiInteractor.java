@@ -4,7 +4,6 @@ import com.cipolat.news.Data.Constants;
 import com.cipolat.news.Data.Network.Model.ArticleResponse;
 import com.cipolat.news.Data.Network.Model.NewsResponse;
 import com.cipolat.news.Logger.L;
-
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.observers.DisposableObserver;

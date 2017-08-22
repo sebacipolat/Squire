@@ -1,16 +1,16 @@
 package com.cipolat.news.UI.ArticleViewer;
 
 import android.content.Context;
-import android.util.Log;
-
 import com.cipolat.news.Data.DataManager;
-import com.cipolat.news.Data.Network.Model.Article;
-import com.cipolat.news.UI.base.Presenter;
-import com.cipolat.news.Data.Network.Model.ArticleResponse;
 import com.cipolat.news.Data.Network.GuardianApiInteractor;
-
+import com.cipolat.news.Data.Network.Model.Article;
+import com.cipolat.news.Data.Network.Model.ArticleResponse;
+import com.cipolat.news.UI.base.Presenter;
+import java.io.IOException;
+import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import java.util.Random;
+import retrofit2.HttpException;
 
 /**
  * Created by sebastian on 23/07/17.
@@ -40,11 +40,17 @@ public class ArticlePresenter implements Presenter<ArticleView> {
             }
 
             @Override
-            public void onError(Throwable e) {
-
+            public void onError(Throwable t) {
+                if (t instanceof HttpException) {
+                    mPView.onSearchFail();
+                } else if (t instanceof SocketTimeoutException) {
+                    mPView.onNetworkError();
+                } else if (t instanceof IOException) {
+                    mPView.onNetworkError();
+                } else {
+                    mPView.onSearchFail();
+                }
             }
-
-
         });
     }
 

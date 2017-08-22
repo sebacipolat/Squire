@@ -60,8 +60,8 @@ public class SuggestNewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     @Override
     public void onClick(View view) {
-        /*if (mListener != null)
-            mListener.onClick(view);*/
+        if (mListener != null)
+            mListener.onClick(view);
     }
 
     //Para Articulos Comunes

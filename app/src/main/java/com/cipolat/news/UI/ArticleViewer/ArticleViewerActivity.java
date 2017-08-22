@@ -19,7 +19,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.cipolat.news.Data.Network.Model.Article;
 import com.cipolat.news.Data.Network.Model.ArticleResponse;
 import com.cipolat.news.Data.Network.Model.ArticleType;
@@ -31,10 +30,8 @@ import com.cipolat.news.Utils.Utils;
 import com.cipolat.superstateview.SuperStateView;
 import com.github.ybq.android.spinkit.SpinKitView;
 import com.squareup.picasso.Picasso;
-
 import org.sufficientlysecure.htmltextview.HtmlHttpImageGetter;
 import org.sufficientlysecure.htmltextview.HtmlTextView;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -80,7 +77,7 @@ public class ArticleViewerActivity extends AppCompatActivity implements ArticleV
     private String shareURL;
     private ArticlePresenter mArticlePresenter;
     private IncludedHeaderLayout mHeaderLay;
-
+    private SuggestNewsAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,8 +102,6 @@ public class ArticleViewerActivity extends AppCompatActivity implements ArticleV
 
     //Fill UI
     private void fillUI(ArticleResponse response) {
-        //Bind includelayout
-
 
         Article art = response.getResponse().getContent();
         //Title
@@ -158,8 +153,22 @@ public class ArticleViewerActivity extends AppCompatActivity implements ArticleV
 
 
     private void fillSuggestlist() {
-        SuggestNewsAdapter adapter = new SuggestNewsAdapter(this, mArticlePresenter.getSuggestedList());
+         adapter= new SuggestNewsAdapter(this, mArticlePresenter.getSuggestedList());
         suggestListNews.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        adapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Article item = adapter.getItemByPos(suggestListNews.getChildAdapterPosition(view));
+                if (item != null) {
+                    Intent inten = new Intent(ArticleViewerActivity.this, ArticleViewerActivity.class);
+                    inten.putExtra(ArticleViewerActivity.ARTICLE_ITEM_ID, item.getApiUrl());
+                    inten.putExtra(ArticleViewerActivity.ARTICLE_ITEM_TITLE, item.getWebTitle());
+                    inten.putExtra(ArticleViewerActivity.ARTICLE_ITEM_COLOR_TYPE, item.getTypeColor());
+                    inten.putExtra(ArticleViewerActivity.ARTICLE_SHARE_URL, item.getWebUrl());
+                    startActivity(inten);
+                }
+            }
+        });
         suggestListNews.setAdapter(adapter);
         suggestListNews.setHasFixedSize(true);
         footer.setVisibility(View.VISIBLE);
@@ -201,15 +210,43 @@ public class ArticleViewerActivity extends AppCompatActivity implements ArticleV
     }
 
     @Override
-    public void onResponseFail() {
+    public void onSearchFail() {
+        setErrorImageState();
     }
 
+    @Override
+    public void onNetworkError() {
+        setNetworkErrorImageState();
+    }
+
+    @Override
+    public void onNetworkTimeOut() {
+        setNetworkErrorImageState();
+    }
+
+    @Override
+    public void onUnkownError(String error) {
+        setErrorImageState();
+    }
+
+
+
     private void setNetworkErrorImageState() {
+        loader.setVisibility(View.GONE);
         errorView.setVisibility(View.VISIBLE);
         errorView.setImageState(R.drawable.cloud_sad);
         errorView.setTitleText(getString(R.string.internet_connection_error_lbl));
         errorView.setSubTitleText(getString(R.string.internet_connection_error_sub_lbl));
         errorView.setTitleStyle(R.style.network_error_placeholder_title);
+        errorView.setSubTitleStyle(R.style.placeholder_error_sub_title);
+    }
+    private void setErrorImageState() {
+        loader.setVisibility(View.GONE);
+        errorView.setVisibility(View.VISIBLE);
+        errorView.setImageState( R.drawable.error_guy);
+        errorView.setTitleText(getString(R.string.response_error_lbl));
+        errorView.setSubTitleText(getString(R.string.response_error_sub_lbl));
+        errorView.setTitleStyle(R.style.response_error_placeholder_title);
         errorView.setSubTitleStyle(R.style.placeholder_error_sub_title);
     }
 

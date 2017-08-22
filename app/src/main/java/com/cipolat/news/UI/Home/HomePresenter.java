@@ -9,6 +9,12 @@ import com.cipolat.news.UI.base.Presenter;
 import com.cipolat.news.Data.Network.Model.NewsResponse;
 import com.cipolat.news.Data.Network.GuardianApiInteractor;
 
+import java.io.IOException;
+import java.net.SocketTimeoutException;
+
+import okhttp3.ResponseBody;
+import retrofit2.HttpException;
+
 /**
  * Created by sebastian on 23/07/17.
  */
@@ -38,9 +44,16 @@ public class HomePresenter implements Presenter<HomeView> {
             }
 
             @Override
-            public void onError(Throwable e) {
-                //mPView.onNetworkError();
-                mPView.onNewsSearchFail();
+            public void onError(Throwable t) {
+                if (t instanceof HttpException) {
+                    mPView.onNewsSearchFail();
+                } else if (t instanceof SocketTimeoutException) {
+                    mPView.onNetworkError();
+                } else if (t instanceof IOException) {
+                    mPView.onNetworkError();
+                } else {
+                    mPView.onNewsSearchFail();
+                }
             }
         });
     }
@@ -48,6 +61,5 @@ public class HomePresenter implements Presenter<HomeView> {
     @Override
     public void detachView() {
         mPView = null;
-
     }
 }

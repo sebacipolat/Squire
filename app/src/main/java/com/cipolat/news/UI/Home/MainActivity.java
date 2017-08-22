@@ -11,7 +11,6 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
-
 import com.cipolat.news.Data.DataManager;
 import com.cipolat.news.Data.Network.Model.ArticleType;
 import com.cipolat.news.Data.Network.Model.SearchBody;

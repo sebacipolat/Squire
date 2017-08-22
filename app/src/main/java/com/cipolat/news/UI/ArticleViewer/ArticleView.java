@@ -8,6 +8,8 @@ import com.cipolat.news.Data.Network.Model.ArticleResponse;
 
 public interface ArticleView {
     void onArticleResponse(ArticleResponse response);
-
-    void onResponseFail();
+    void onSearchFail();
+    void onNetworkError();
+    void onNetworkTimeOut();
+    void onUnkownError(String error);
 }

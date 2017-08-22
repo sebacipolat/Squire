@@ -7,8 +7,9 @@ import com.cipolat.news.Data.Network.Model.NewsResponse;
  */
 
 public interface HomeView {
-
     void onNewsSearchResponse(NewsResponse response);
     void onNewsSearchFail();
     void onNetworkError();
+    void onNetworkTimeOut();
+    void onUnkownError(String error);
 }
