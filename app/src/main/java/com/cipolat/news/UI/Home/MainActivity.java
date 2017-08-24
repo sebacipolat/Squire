@@ -44,9 +44,7 @@ public class MainActivity extends AppCompatActivity {
         Spannable textTitle = new SpannableString(getString(R.string.app_name));
         textTitle.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.political_red)), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         mainTitle.setText(textTitle);
-
         mTabLayout.setupWithViewPager(mViewPager);
-
         //Cargo ViewPager
         setupViewPager(mViewPager);
         DataManager.getInstance().init(this);

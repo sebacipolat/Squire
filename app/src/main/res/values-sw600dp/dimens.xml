@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="article_view_header_angle_port">10</integer>
+    <integer name="article_view_header_angle_land">10</integer>
+
+</resources>

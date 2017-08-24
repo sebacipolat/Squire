@@ -4,18 +4,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.cipolat.news.Data.Network.Model.Article;
 import com.cipolat.news.Data.Network.Model.NewsResponse;
 import com.cipolat.news.Data.Network.Model.SearchBody;
 import com.cipolat.news.R;
 import com.cipolat.news.UI.ArticleViewer.ArticleViewerActivity;
+import com.cipolat.news.Utils.DeviceUtils;
 import com.cipolat.superstateview.SuperStateView;
+
 import java.util.ArrayList;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -57,21 +62,24 @@ public class NewsListFragment extends Fragment implements HomeView {
 
     private void fillList(ArrayList<Article> lista) {
         final NewsAdapter adapter = new NewsAdapter(getActivity(), lista);
-        listNews.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-       /* GridLayoutManager manager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
-        manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-            @Override
-            public int getSpanSize(int position) {
-                // 2 column size for first row
-                return (position == 0 ? 2 : 1);
-            }
-        });
-        listNews.setLayoutManager(manager);*/
+        if (DeviceUtils.isLandScape(getActivity())) {
+            GridLayoutManager manager = new GridLayoutManager(getActivity(), 2, GridLayoutManager.VERTICAL, false);
+            manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+                @Override
+                public int getSpanSize(int position) {
+                    // 2 column size for first row
+                    return (position == 0 ? 2 : 1);
+                }
+            });
+            listNews.setLayoutManager(manager);
+        } else {
+            listNews.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        }
         adapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Article item = adapter.getItemByPos(listNews.getChildAdapterPosition(view));
-                if (item != null) {
+                if (item != null && !item.isDummy()) {
                     Intent inten = new Intent(getActivity(), ArticleViewerActivity.class);
                     inten.putExtra(ArticleViewerActivity.ARTICLE_ITEM_ID, item.getApiUrl());
                     inten.putExtra(ArticleViewerActivity.ARTICLE_ITEM_TITLE, item.getWebTitle());
@@ -138,15 +146,16 @@ public class NewsListFragment extends Fragment implements HomeView {
 
     private void setNetworkErrorImageState() {
         stateView.setVisibility(View.VISIBLE);
-        stateView.setImageState( R.drawable.cloud_sad);
+        stateView.setImageState(R.drawable.cloud_sad);
         stateView.setTitleText(getString(R.string.internet_connection_error_lbl));
         stateView.setSubTitleText(getString(R.string.internet_connection_error_sub_lbl));
         stateView.setTitleStyle(R.style.network_error_placeholder_title);
         stateView.setSubTitleStyle(R.style.placeholder_error_sub_title);
     }
+
     private void setErrorImageState() {
         stateView.setVisibility(View.VISIBLE);
-        stateView.setImageState( R.drawable.error_guy);
+        stateView.setImageState(R.drawable.error_guy);
         stateView.setTitleText(getString(R.string.response_error_lbl));
         stateView.setSubTitleText(getString(R.string.response_error_sub_lbl));
         stateView.setTitleStyle(R.style.response_error_placeholder_title);

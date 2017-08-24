@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/cardPlaceItm"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    card_view:cardBackgroundColor="@android:color/transparent"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="4dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/categoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/red"
+                android:padding="3dp"
+                android:text="@string/topStory"
+                android:textAllCaps="true"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/white" />
+
+            <com.cipolat.news.UI.CustomView.CustomTextView
+                android:id="@+id/itm_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/dark_shadow_top"
+                android:gravity="center"
+                android:maxLines="3"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:shadowColor="@color/textColorPrimary"
+                android:shadowRadius="10"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:setAssetFont="Prozak bold.ttf" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

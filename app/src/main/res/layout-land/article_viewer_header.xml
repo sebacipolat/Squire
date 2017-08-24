@@ -14,7 +14,7 @@
         android:src="@drawable/dark_shadow_top" />
 
     <com.github.florent37.diagonallayout.DiagonalLayout
-        app:diagonal_angle="@integer/article_view_header_angle_port"
+        app:diagonal_angle="@integer/article_view_header_angle_land"
         app:diagonal_direction="right"
         app:diagonal_position="bottom"
         android:layout_width="match_parent"
