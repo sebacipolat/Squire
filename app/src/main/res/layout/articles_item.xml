@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardPlaceItm"
     android:layout_width="match_parent"
     android:layout_height="250dp"
@@ -62,7 +62,6 @@
                 android:textAppearance="@android:style/TextAppearance.Medium"
                 android:maxLines="2"
                 android:textColor="@color/textColorPrimary"
-                app:setAssetFont="Prozak bold.ttf"
                 android:textStyle="bold"/>
 
             <com.cipolat.news.UI.CustomView.CustomTextView
@@ -72,7 +71,6 @@
                 android:layout_marginTop="3dp"
                 android:textAppearance="@android:style/TextAppearance.Medium"
                 android:textColor="@color/greyDelta"
-                app:setAssetFont="Prozak light.ttf"
                 />
         </LinearLayout>
     </LinearLayout>
