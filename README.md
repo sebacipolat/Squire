@@ -16,7 +16,7 @@ The data is provide by [The Guardian](https://www.theguardian.com/)
 ![Imagen ejemplo](https://github.com/sebacipolat/Squire/blob/master/Images/banner.png)
 
 
-##Technology used:
+## Technology used:
 
 The app is based on MVP
 
