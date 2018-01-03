@@ -1,4 +1,5 @@
 <img src='https://github.com/sebacipolat/Squire/blob/master/Images/news_medium.png' height="100"/>
+
 ## Squire
 ###### by Sebastian Cipolat
 [@seba_cipolat](http://twitter.com/seba_cipolat)
