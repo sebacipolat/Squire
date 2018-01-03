@@ -23,10 +23,15 @@ The app is based on MVP
 Libraries:
 
 RxJava
+
 RxAndroid
+
 okhttp3
+
 Butterknife
+
 picasso
+
 appcompat-v7
 
 
