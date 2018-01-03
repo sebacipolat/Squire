@@ -15,6 +15,12 @@ The data is provide by [The Guardian](https://www.theguardian.com/)
 
 ![Imagen ejemplo](https://github.com/sebacipolat/Squire/blob/master/Images/banner.png)
 
+Download 
+<p>
+<a href='https://play.google.com/store/apps/details?id=com.cipolat.news'>
+    <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height="100"/>
+</a>
+  
 
 ## Technology used:
 
