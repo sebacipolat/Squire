@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cipolat.news">
-
     <application
         android:name=".APP"
         android:allowBackup="true"
@@ -21,8 +20,7 @@
         </activity>
         <activity
             android:name=".UI.ArticleViewer.ArticleViewerActivity"
-            android:parentActivityName=".UI.Home.MainActivity"></activity>
+            android:parentActivityName=".UI.Home.MainActivity"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
-
 </manifest>

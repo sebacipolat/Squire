@@ -63,7 +63,5 @@
                 app:setAssetFont="Prozak bold.ttf" />
 
         </LinearLayout>
-
     </FrameLayout>
-
 </android.support.v7.widget.CardView>

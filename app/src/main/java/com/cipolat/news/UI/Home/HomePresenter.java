@@ -1,18 +1,13 @@
 package com.cipolat.news.UI.Home;
 
 import android.content.Context;
-
 import com.cipolat.news.Data.DataManager;
-import com.cipolat.news.Data.Network.Model.ArticleType;
+import com.cipolat.news.Data.Network.GuardianApiInteractor;
+import com.cipolat.news.Data.Network.Model.NewsResponse;
 import com.cipolat.news.Data.Network.Model.SearchBody;
 import com.cipolat.news.UI.base.Presenter;
-import com.cipolat.news.Data.Network.Model.NewsResponse;
-import com.cipolat.news.Data.Network.GuardianApiInteractor;
-
 import java.io.IOException;
 import java.net.SocketTimeoutException;
-
-import okhttp3.ResponseBody;
 import retrofit2.HttpException;
 
 /**
