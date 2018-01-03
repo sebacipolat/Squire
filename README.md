@@ -1,5 +1,4 @@
-![squire](https://github.com/sebacipolat/Squire/blob/master/Images/news_medium.png) 
-
+<img src='https://github.com/sebacipolat/Squire/blob/master/Images/news_medium.png' height="100"/>
 ## Squire
 ###### by Sebastian Cipolat
 [@seba_cipolat](http://twitter.com/seba_cipolat)
@@ -20,7 +19,7 @@ Download
 <a href='https://play.google.com/store/apps/details?id=com.cipolat.news'>
     <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height="100"/>
 </a>
-  
+</p>  
 
 ## Technology used:
 
