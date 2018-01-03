@@ -51,7 +51,10 @@ The Guardian Api Service is used as data source.
 
 1- Go to https://bonobo.capi.gutools.co.uk/register/developer an create a developer account.
 
-2- Modify the 'Constants.java' at /app/src/main/java/com/cipolat/news/Data
+2- Modify 'Constants.java' at /app/src/main/java/com/cipolat/news/Data
+
+   reeplace the API_KEY value with your dev key.
+
 
 
 **FEATURES**
