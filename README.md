@@ -26,11 +26,13 @@ picasso
 appcompat-v7
 
 
-**BEFORE RUN**
+## BEFORE RUN
+
 The Guardian Api Service is used as data source.
 [The Guardian open platform](http://open-platform.theguardian.com/)
 
 **You should create an api key**
+
 1- Go to https://bonobo.capi.gutools.co.uk/register/developer an create a developer account.
 2- Modify the 'Constants.java' at /app/src/main/java/com/cipolat/news/Data
 
@@ -40,23 +42,27 @@ The Guardian Api Service is used as data source.
 The app has only two screens, it's only a demostration with limited features.
 
 **Home**
+
 ![Home](https://github.com/sebacipolat/Squire/blob/master/Images/home.png)
 
 The search icon is only for demostration.
 
 
 **Article Viewer**
+
 ![Article](https://github.com/sebacipolat/Squire/blob/master/Images/article.png)
 
 
 
   
 **FeedBack**
+
   Please feel free to report bugs, suggestion,etc. I'll be pending.
   
   If you will made a fork an use on your project let me know! to add to the description.
 
 [@seba_cipolat](http://twitter.com/seba_cipolat)
+
 ## License
     Copyright 2018 sebastian cipolat
 
