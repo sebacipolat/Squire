@@ -1,4 +1,4 @@
-# Squire
+![squire](https://github.com/sebacipolat/Squire/blob/master/Images/news_medium.png) # Squire
 ###### by Sebastian Cipolat
 [@seba_cipolat](http://twitter.com/seba_cipolat)
 
