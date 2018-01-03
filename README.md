@@ -1,7 +1,9 @@
 # Squire
 ###### by Sebastian Cipolat
 [@seba_cipolat](http://twitter.com/seba_cipolat)
+
 [www.sebastiancipolat.com](www.sebastiancipolat.com)
+
 [sebastiancipolat Linkedin](www.linkedin.com/in/sebastiancipolat)
 
 
@@ -29,6 +31,7 @@ appcompat-v7
 ## BEFORE RUN
 
 The Guardian Api Service is used as data source.
+
 [The Guardian open platform](http://open-platform.theguardian.com/)
 
 **You should create an api key**
@@ -45,7 +48,7 @@ The app has only two screens, it's only a demostration with limited features.
 
 ![Home](https://github.com/sebacipolat/Squire/blob/master/Images/home.png)
 
-The search icon is only for demostration.
+The search icon is only for demostration purpose.
 
 
 **Article Viewer**
@@ -62,6 +65,10 @@ The search icon is only for demostration.
   If you will made a fork an use on your project let me know! to add to the description.
 
 [@seba_cipolat](http://twitter.com/seba_cipolat)
+
+[www.sebastiancipolat.com](www.sebastiancipolat.com)
+
+[sebastiancipolat Linkedin](www.linkedin.com/in/sebastiancipolat)
 
 ## License
     Copyright 2018 sebastian cipolat
