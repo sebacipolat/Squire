@@ -25,7 +25,9 @@ jobs:
           destination: reports
       - store_test_results:
           path: app/build/test-results
-    test:
-	  override:
-	    - ./gradlew assembleDebug
-	    - cp -r Squire/build/outputs $CIRCLE_ARTIFACTS
+      - run:
+          name: Initial build
+          command: ./gradlew assembleDebug
+      - store_artifacts:
+          path: app/build/outputs/apk/
+          destination: apks/
