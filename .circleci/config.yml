@@ -33,4 +33,4 @@ jobs:
           destination: apks/
       - run:
 	 name: deploy hockey apps
-         command: /scripts/deployHockeyApp.sh && uploadToHockeyApp
+         command: bash /scripts/deployHockeyApp.sh && uploadToHockeyApp
