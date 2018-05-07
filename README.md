@@ -1,4 +1,6 @@
-# Squire
+<img src='https://github.com/sebacipolat/Squire/blob/master/Images/news_medium.png' height="100"/>
+
+## Squire
 ###### by Sebastian Cipolat
 [@seba_cipolat](http://twitter.com/seba_cipolat)
 
@@ -13,18 +15,29 @@ The data is provide by [The Guardian](https://www.theguardian.com/)
 
 ![Imagen ejemplo](https://github.com/sebacipolat/Squire/blob/master/Images/banner.png)
 
+Download 
+<p>
+<a href='https://play.google.com/store/apps/details?id=com.cipolat.news'>
+    <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height="100"/>
+</a>
+</p>  
 
-##Technology used:
+## Technology used:
 
 The app is based on MVP
 
 Libraries:
 
 RxJava
+
 RxAndroid
+
 okhttp3
+
 Butterknife
+
 picasso
+
 appcompat-v7
 
 
@@ -37,7 +50,11 @@ The Guardian Api Service is used as data source.
 **You should create an api key**
 
 1- Go to https://bonobo.capi.gutools.co.uk/register/developer an create a developer account.
-2- Modify the 'Constants.java' at /app/src/main/java/com/cipolat/news/Data
+
+2- Modify 'Constants.java' at /app/src/main/java/com/cipolat/news/Data
+
+   reeplace the API_KEY value with your dev key.
+
 
 
 **FEATURES**
